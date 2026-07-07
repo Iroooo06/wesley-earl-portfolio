@@ -687,3 +687,92 @@ opacity:1;
     color:white;
     cursor:pointer;
 }
+#particles-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    z-index:-1;
+
+    pointer-events:none;
+}
+
+section{
+
+    background: rgba(10,15,25,.45);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+}
+
+section .container{
+
+    position: relative;
+    z-index: 2;
+
+}
+
+section:not(:first-of-type){
+
+    background: rgba(10,15,25,.45);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.hero-title{
+
+    width:100%;
+    min-height:100px;
+
+    display:flex;
+    align-items:flex-start;
+}
+/* Desktop */
+#typing{
+    white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    #typing{
+
+        white-space: normal;
+        word-break: keep-all;
+
+        text-align:center;
+
+    }
+
+}
+#typing{
+
+    font-family: "JetBrains Mono", monospace;
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+#typing::after{
+
+    content: "|";
+
+    color: inherit;
+
+    animation: blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
